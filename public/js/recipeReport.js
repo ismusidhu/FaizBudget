@@ -18,6 +18,7 @@ var RecipeReport = (function () {
     var d = {};
     d.dateWiseReport = this.getDateWiseReport();
     d.ingredientWiseAverage = this.getIngredientWiseAverage();
+    return d;
   };
 
   recipeReport.prototype.matchCriteria = function(meal) {

@@ -5,11 +5,9 @@
 </head>
 
 <body>
-  <form >
+<div class="container">
+  <form>
     <fieldset>
-
-
-
       <!-- Form Name -->
       <legend>Form Name</legend>
 
@@ -58,12 +56,23 @@
         </div>
       </div>
       <div class="form-group">
-        <button type="button" id="singlebutton" name="singlebutton" class="btn btn-primary" aria-label="Single Button">Go</button>
+        <button type="button" id="goButton" name="goButton" class="btn btn-primary" aria-label="Single Button">Go</button>
       </div>
     </fieldset>
   </form>
-<div>
-
+</div>
+<div id="container">
+  <table id="avgTable" class="hidden">
+    <thead>
+    <tr>
+        <th>Ingredient</th>
+        <th>Quantity</th>
+        <th>Unit</th>
+        <th>Amount</th>
+        <th>Per Unit Cost</th>
+    </tr>
+    </thead>
+  </table>
 </div>
   <% include ../partials/nav.ejs %>
 
