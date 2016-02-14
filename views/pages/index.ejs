@@ -5,9 +5,70 @@
 </head>
 
 <body>
+  <form >
+    <fieldset>
 
+
+
+      <!-- Form Name -->
+      <legend>Form Name</legend>
+
+      <!-- File Button http://getbootstrap.com/css/#forms -->
+      <div class="form-group">
+        <label for="fileinput" class="control-label">CSV for data</label>
+
+        <input type="file" id="fileinput" name="fileinput">
+
+
+      </div>
+      <!-- Text input http://getbootstrap.com/css/#forms -->
+      <div class="form-group">
+        <label for="fromDate" class="control-label">From Date</label>
+
+        <input type="text" value="14370508" class="form-control" id="fromDate" placeholder="From">
+
+
+      </div>
+      <!-- Text input http://getbootstrap.com/css/#forms -->
+      <div class="form-group">
+        <label for="toDate" class="control-label">To Date</label>
+
+        <input type="text" value="14370510" class="form-control" id="toDate" placeholder="To">
+
+
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="recipe">Recipe</label>
+        <div class="input-group input-append dropdown combobox" data-initialize="combobox">
+          <input id="recipe" name="recipe" value="Bhajiya" type="text" aria-label="" class="form-control" placeholder="recipe">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" aria-label="Recipe autofill suggestions" data-toggle="dropdown"><span class="caret"></span></button>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <li data-value="Bhajiya"><a href="#">Bhajiya</a></li>
+              <li data-value="Chicken"><a href="#">Chicken</a></li>
+              <li data-value="Kadhi"><a href="#">Kadhi</a></li>
+              <li data-value="MasoorRice"><a href="#">MasoorRice</a></li>
+              <li data-value="Recipe1"><a href="#">Recipe1</a></li>
+              <li data-value="Recipe2"><a href="#">Recipe2</a></li>
+              <li data-value="Recipe3"><a href="#">Recipe3</a></li>
+              <li data-value="Recipe4"><a href="#">Recipe4</a></li>
+              <li data-value="Recipe5"><a href="#">Recipe5</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="button" id="singlebutton" name="singlebutton" class="btn btn-primary" aria-label="Single Button">Go</button>
+      </div>
+    </fieldset>
+  </form>
+<div>
+
+</div>
   <% include ../partials/nav.ejs %>
 
   <% include ../partials/bottom_scripts.ejs %>
+  <script src="/js/recipeReport.js"></script>
+  <script src="/js/index.js"></script>
 </body>
 </html>
