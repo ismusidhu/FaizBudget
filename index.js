@@ -19,7 +19,7 @@ app.get('/', function(request, response) {
 
   // Connection URL. This is where your mongodb server is running.
   //var url = 'mongodb://localhost:27017/my_database_name';  
-  var url = 'mongodb://faizuser:fuser@ds035553.mongolab.com:35553/faiz_budget';
+  var url = process.env.MONGOLAB_URL;
 
   // Use connect method to connect to the Server
   MongoClient.connect(url, function (err, db) {
@@ -30,7 +30,7 @@ app.get('/', function(request, response) {
       console.log('Connection established to', url);
 
       // Get the documents collection
-      var collection = db.collection('users');
+      var collection = db.collection('recipe_ingredients');
 
       //Create some users
       var user1 = {name: 'modulus admin', age: 42, roles: ['admin', 'moderator', 'user']};
