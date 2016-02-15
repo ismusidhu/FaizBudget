@@ -37,8 +37,8 @@ var RecipeReport = (function () {
           date: meal.date,
           noOfThaalis: meal.noOfThaalis,
           //total cost of recipe made on this date
-          totalCost: cost,
-          perThaaliCost: (cost/meal.noOfThaalis) * standartThaaliCount
+          perThaaliCost: (cost/meal.noOfThaalis) * standartThaaliCount,
+          totalCost: cost
         });
       }
     }
@@ -80,8 +80,8 @@ var RecipeReport = (function () {
         "IngredientName": prop,
         "Quantity": report[prop].qty/report[prop].count,
         "Unit": report[prop].unit,
-        "Amount": report[prop].amount/report[prop].count,
-        "PerUnitCost": report[prop].amount/report[prop].qty
+        "PerUnitCost": report[prop].amount/report[prop].qty,
+        "Amount": report[prop].amount/report[prop].count
       });
     }
 

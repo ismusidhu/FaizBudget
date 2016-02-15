@@ -7,17 +7,32 @@ $(function(){
         $('#recipe').val()
         );
       var output = recipeReport.run();
+
+      //$('#avgTable').parent().removeClass("hidden");
       $('#avgTable').dataTable({
         "aaData": output.ingredientWiseAverage,
-        "aoColumns": [{"mDataProp": "IngredientName"}, 
-                      {"mDataProp": "Quantity"}, 
-                      {"mDataProp": "Unit"}, 
-                      {"mDataProp": "Amount"}, 
-                      {"mDataProp": "PerUnitCost"}],
+        "aoColumns": [{"mDataProp": "IngredientName"},
+                      {"mDataProp": "Quantity"},
+                      {"mDataProp": "Unit"},
+                      {"mDataProp": "PerUnitCost"},
+                      {"mDataProp": "Amount"}
+                    ],
         bFilter: false, 
         bInfo: false,
         paging: false
-      }).toggleClass("hidden");
+      }).removeClass("hidden");
+
+      //$('#costOfRecipeDatewise').parent().removeClass("hidden");
+      $('#costOfRecipeDatewise').dataTable({
+        "aaData": output.dateWiseReport,
+        "aoColumns": [{"mDataProp": "date"}, 
+                      {"mDataProp": "noOfThaalis"}, 
+                      {"mDataProp": "perThaaliCost"}, 
+                      {"mDataProp": "totalCost"}],
+        bFilter: false, 
+        bInfo: false,
+        paging: false
+      }).removeClass("hidden");
     });
   });
 });
